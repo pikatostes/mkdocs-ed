@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Control de versiones - Documentacion</title>
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Control de versiones";
+    var mkdocs_page_input_path = "controlVersiones.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documentacion</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Welcome to MkDocs</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ACTS-CVS1/">Ciclo de vida del Software</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ACTS-CVS2/">CICLO DE VIDA DEL SOFTWARE</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../acts/">ENTORNOS DE DESARROLLO INTEGRADO</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../clases/">ACTIVIDADES UNIDAD 5: DIAGRAMAS DE CLASES</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Control de versiones</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-ademas-de-git-que-otros-sistemas-de-control-de-versiones-existen">1. Además de Git, ¿que otros sistemas de control de versiones existen?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-en-git-que-tres-areas-existen">2. En Git, ¿qué tres áreas existen?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-en-git-para-que-sirve-el-comando-git-config">5. En Git, ¿para qué sirve el comando git config?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-en-git-para-que-sirve-el-comando-git-init">6. En Git, ¿para qué sirve el comando git init?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-en-git-para-que-sirve-el-comando-git-clone">7. En Git, ¿para qué sirve el comando git clone?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-en-git-para-que-sirve-el-comando-git-status">8. En Git, ¿para qué sirve el comando git status?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-en-git-para-que-sirve-el-comando-git-add">9. En Git, ¿para qué sirve el comando git add?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-en-git-para-que-sirve-el-comando-git-commit">10. En Git, ¿para qué sirve el comando git commit?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#11-en-git-para-que-sirve-el-comando-git-log">11. En Git, ¿para qué sirve el comando git log?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12-en-git-para-que-sirve-el-comando-git-reset-head-nombrearchivo">12. En Git, ¿para qué sirve el comando git reset HEAD nombrearchivo?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-en-git-para-que-sirve-el-comando-git-checkout-nombrearchivo">13. En Git, ¿para qué sirve el comando git checkout -- nombrearchivo?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#15-en-git-para-que-sirve-el-comando-git-branch">15. En Git, ¿para qué sirve el comando git branch?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#16-en-git-para-que-sirve-el-comando-git-checkout">16. En Git, ¿para qué sirve el comando git checkout?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#17-en-git-para-que-sirve-el-comando-git-merge">17. En Git, ¿para qué sirve el comando git merge?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#18-en-git-explica-como-funciona-la-fusion-merge-de-tipo-fast-forward">18. En Git, explica cómo funciona la fusión (merge) de tipo fast-forward.</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../optimizacion/">OPTIMIZACIÓN</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documentacion</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Control de versiones</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="control-de-versiones">Control de versiones</h1>
+<h3 id="1-ademas-de-git-que-otros-sistemas-de-control-de-versiones-existen">1. Además de Git, ¿que otros sistemas de control de versiones existen?</h3>
+<ul>
+<li>CVS, Subversion o Mercurial</li>
+</ul>
+<h3 id="2-en-git-que-tres-areas-existen">2. En Git, ¿qué tres áreas existen?</h3>
+<ul>
+<li>El directorio de Git (Git directory), el directorio de trabajo (working directory), y el área de preparación (staging area).</li>
+</ul>
+<h3 id="5-en-git-para-que-sirve-el-comando-git-config">5. En Git, ¿para qué sirve el comando <code>git config</code>?</h3>
+<ul>
+<li>Para definir valores de configuración de Git a nivel de un proyecto global o local.</li>
+</ul>
+<h3 id="6-en-git-para-que-sirve-el-comando-git-init">6. En Git, ¿para qué sirve el comando <code>git init</code>?</h3>
+<ul>
+<li>Para crear un nuevo repositorio de Git.</li>
+</ul>
+<h3 id="7-en-git-para-que-sirve-el-comando-git-clone">7. En Git, ¿para qué sirve el comando <code>git clone</code>?</h3>
+<ul>
+<li>Se utiliza principalmente para apuntar a un repositorio existente y clonar o copiar dicho repositorio en un nuevo directorio, en otra ubicación.</li>
+</ul>
+<h3 id="8-en-git-para-que-sirve-el-comando-git-status">8. En Git, ¿para qué sirve el comando <code>git status</code>?</h3>
+<ul>
+<li>Para mostrar el estado del directorio de trabajo y del área del entorno de ensayo.</li>
+</ul>
+<h3 id="9-en-git-para-que-sirve-el-comando-git-add">9. En Git, ¿para qué sirve el comando <code>git add</code>?</h3>
+<ul>
+<li>Para añadir un cambio del directorio de trabajo en el entorno de ensayo.</li>
+</ul>
+<h3 id="10-en-git-para-que-sirve-el-comando-git-commit">10. En Git, ¿para qué sirve el comando <code>git commit</code>?</h3>
+<ul>
+<li>Para confirmar una instantánea del directorio del entorno de ensayo en el historial de confirmaciones de los repositorios.</li>
+</ul>
+<h3 id="11-en-git-para-que-sirve-el-comando-git-log">11. En Git, ¿para qué sirve el comando <code>git log</code>?</h3>
+<ul>
+<li>Para explorar el historial del repositorio.</li>
+</ul>
+<h3 id="12-en-git-para-que-sirve-el-comando-git-reset-head-nombrearchivo">12. En Git, ¿para qué sirve el comando <code>git reset HEAD nombrearchivo</code>?</h3>
+<ul>
+<li>Para deshacer los cambios locales en el estado de un repositorio de Git. Actúa en el historial de confirmaciones (HEAD).</li>
+</ul>
+<h3 id="13-en-git-para-que-sirve-el-comando-git-checkout-nombrearchivo">13. En Git, ¿para qué sirve el comando <code>git checkout -- nombrearchivo</code>?</h3>
+<ul>
+<li>Te permite deshacer cambios en un archivo concreto.</li>
+</ul>
+<h3 id="15-en-git-para-que-sirve-el-comando-git-branch">15. En Git, ¿para qué sirve el comando <code>git branch</code>?</h3>
+<ul>
+<li>Sirve para crear, enumerar y eliminar ramas, así como cambiar su nombre.</li>
+</ul>
+<h3 id="16-en-git-para-que-sirve-el-comando-git-checkout">16. En Git, ¿para qué sirve el comando <code>git checkout</code>?</h3>
+<ul>
+<li>Te permite desplazarte entre las ramas creadas por <code>git branch</code>.</li>
+</ul>
+<h3 id="17-en-git-para-que-sirve-el-comando-git-merge">17. En Git, ¿para qué sirve el comando <code>git merge</code>?</h3>
+<ul>
+<li>Te permite tomar las líneas independientes de desarrollo creadas por git branch e integrarlas en una sola rama.</li>
+</ul>
+<h3 id="18-en-git-explica-como-funciona-la-fusion-merge-de-tipo-fast-forward">18. En Git, explica cómo funciona la fusión (merge) de tipo fast-forward.</h3>
+<ul>
+<li>Lo que hace es acelerar el flujo de trabajo en el proceso del proyecto. Esto lo consigue mediante la armonización de la rama principal del proyecto, con las modificaciones resultantes de la creación de una rama <em><code>feature</code></em> con determinadas especificaciones de cambios. Destaca por su capacidad de cambiar el *HEAD* en el sistema.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../optimizacion/" class="btn btn-neutral float-right" title="OPTIMIZACIÓN">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../clases/" class="btn btn-neutral" title="ACTIVIDADES UNIDAD 5: DIAGRAMAS DE CLASES"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../clases/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../optimizacion/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
